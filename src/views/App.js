@@ -1,9 +1,14 @@
-import './App.css';
-import Navbar from '../../src/components/Navbar.jsx';
+import React from "react";
+import "./App.css";
+import Navbar from "../../src/components/Navbar.jsx";
+import Slideshow from "../components/Slideshow";
 
 function App() {
   return (
-    <Navbar></Navbar>
+    <React.Fragment>
+      <Navbar></Navbar>
+      <Slideshow></Slideshow>
+    </React.Fragment>
   );
 }
 
