@@ -1,0 +1,12 @@
+[
+    {
+     "category": "OEM Turbocharger",
+     "image": "oem image",
+     "id": "1"
+    },
+    {
+     "category": "Upgrade Turbocharger",
+     "image": "upgrade image",
+     "id": "2"
+    }
+]
