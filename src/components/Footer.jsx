@@ -104,10 +104,10 @@ const Footer = (props) => {
                 <input
                   id="newsletter1"
                   type="text"
-                  class="form-control"
+                  class="form-control rounded-0"
                   placeholder="Email address"
                 ></input>
-                <button class="btn btn-primary bg-danger border-danger" type="button">
+                <button class="btn btn-primary bg-danger border-danger rounded-0" type="button">
                   Subscribe
                 </button>
               </div>

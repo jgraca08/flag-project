@@ -4,8 +4,8 @@ const Search = (props) => {
 
     return(
         <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-            <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input class="form-control me-2 border border-danger rounded-0" type="search" placeholder="Search" aria-label="Search"></input>
+            <button class="btn btn-outline-danger rounded-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
     )
 

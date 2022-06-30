@@ -4,6 +4,7 @@ import Navbar from "../../src/components/Navbar.jsx";
 import Slideshow from "../components/Slideshow";
 import Cards from "../components/Cards";
 import Footer from "../components/Footer";
+import Section from "../components/Section";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar></Navbar>
       <Slideshow></Slideshow>
       <Cards></Cards>
+      <Section></Section>
       <Footer></Footer>
     </React.Fragment>
   );
