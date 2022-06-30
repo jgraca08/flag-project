@@ -25,7 +25,7 @@ const Slideshow = (props) => {
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/slideshow1.jpg" class="d-block w-100" alt="..."></img>
+            <img src="images/slideshow3.jpg" class="d-block w-100" alt="..."></img>
             <div class="carousel-caption d-none d-md-block">
               <h2>Third slide label</h2>
               <p>Some representative placeholder content for the third slide.</p>
