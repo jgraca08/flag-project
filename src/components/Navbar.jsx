@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Search from "../../src/components/Search.jsx";
 import Favorites from "./Favorites.jsx";
+import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
   return (
@@ -29,13 +30,7 @@ const Navbar = (props) => {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a
-                class="nav-link active fw-bold text-white"
-                aria-current="page"
-                href="#"
-              >
-                Home
-              </a>
+              <Link to={"/"} class="nav-link active fw-bold text-white" aria-current="page">Home</Link>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-white" href="#">
@@ -55,13 +50,13 @@ const Navbar = (props) => {
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Original Turbochargers
-                  </a>
+                  <Link to={"/products"} class="dropdown-item" >
+                    Turbochargers
+                  </Link>
                 </li>
                 <li>
                   <a class="dropdown-item" href="#">
-                    Performance Turbochargers
+                    Turbochargers 2
                   </a>
                 </li>
               </ul>
