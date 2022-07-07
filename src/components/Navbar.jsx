@@ -46,19 +46,19 @@ const Navbar = (props) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Products
+                Turbochargers
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link to={"/products"} className="dropdown-item" >
-                    Turbochargers
+                  <Link to={"/original"} className="dropdown-item" >
+                    Original
                   </Link>
                 </li>
-                {/* <li>
-                  <a className="dropdown-item" href="#">
-                    Turbochargers 2
-                  </a>
-                </li> */}
+                <li>
+                  <Link to={"/performance"} className="dropdown-item" >
+                    Performance
+                  </Link>
+                </li>
               </ul>
             </li>
             <li className="nav-item">
