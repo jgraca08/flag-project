@@ -5,17 +5,17 @@ const Cards = (props) => {
   return (
     <div className="container mt-4 mb-5">
       <div className="d-grid gap-2 d-md-flex justify-content-md-center mb-4">
-        <button type="button" class="btn btn-outline-danger rounded-0">
+        <button type="button" className="btn btn-outline-danger rounded-0">
           Original
         </button>
-        <button type="button" class="btn btn-outline-danger rounded-0">
+        <button type="button" className="btn btn-outline-danger rounded-0">
           Performance
         </button>
       </div>
       
       <div className="row row-cols-1 row-cols-md-3 g-4">
         <div className="col">
-          <div className="card h-100 shadow">
+          <div className="card h-100 shadow rounded-0">
           <div className="inner">
             <img src="images/performance1.jpg" className="card-img-top" alt="turbocharger"></img>
             </div>
@@ -32,7 +32,7 @@ const Cards = (props) => {
           </div>
         </div>
         <div className="col">
-          <div className="card h-100 shadow">
+          <div className="card h-100 shadow rounded-0">
           <div className="inner">
             <img src="images/performance2.jpg" className="card-img-top" alt="turbocharger"></img>
             </div>
@@ -49,7 +49,7 @@ const Cards = (props) => {
           </div>
         </div>
         <div className="col">
-          <div className="card h-100 shadow">
+          <div className="card h-100 shadow rounded-0">
           <div className="inner">
             <img src="images/performance3.jpg" className="card-img-top " alt="..."></img>
             </div>
