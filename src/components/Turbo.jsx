@@ -48,7 +48,6 @@ const Turbo = (props) => {
     return (
       <>
         <div className="container mt-4 mb-4">
-          <div className="row">
             {turbos.map((turbo) => {
               return (
                 <div class="row gx-4 gx-lg-5 align-items-center" key={turbo.id}>
@@ -75,7 +74,6 @@ const Turbo = (props) => {
               );
             })}
           </div>
-        </div>
       </>
     );
   }

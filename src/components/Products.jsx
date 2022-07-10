@@ -1,11 +1,20 @@
 import React, { useEffect, useState } from "react";
+import InputSearch from "./InputSearch";
 import Turbos from "./Turbos";
-import { Link } from "react-router-dom";
+
 
 const Products = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [categories, setCategories] = useState([]);
+
+  const [search, setSearch] = useState(undefined);
+
+    function aoEscrever(e) {
+        setSearch(e.target.value);
+    }
+
+  
 
   useEffect(() => {
     fetch("https://62a0f7fb039c39cc8232a97d.mockapi.io/api/v1/categories")
@@ -39,7 +48,7 @@ const Products = (props) => {
   } else {
     return (
       <>
-      <div className="container mb-5 mt-5">
+      <div className="container mb-3 mt-5">
         <div className="row">
        
             {categories.map((category, index) => {
@@ -67,8 +76,10 @@ const Products = (props) => {
           
         </div>
       </div>
-      
-      <Turbos></Turbos>
+      <div className="container">
+      <InputSearch id="search" name="search" value={search} aoEscrever={aoEscrever} />
+      </div>
+      <Turbos search={search}/>
     </>
     );
   }

@@ -22,7 +22,6 @@ const Section = (props) => {
                   lead-in to additional content. This content is a little bit
                   longer.
                 </p>
-                <p className="card-text">Last updated 3 mins ago</p>
                 <a href="#" className="btn btn-sm btn-danger rounded-0">
                   Go somewhere
                 </a>
@@ -43,7 +42,7 @@ const Section = (props) => {
                   lead-in to additional content. This content is a little bit
                   longer.
                 </p>
-                <p className="card-text">Last updated 3 mins ago</p>
+                
                 <a href="#" className="btn btn-sm btn-danger rounded-0">
                   Go somewhere
                 </a>

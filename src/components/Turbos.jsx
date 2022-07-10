@@ -6,9 +6,12 @@ const Turbos = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [turbos, setTurbos] = useState([]);
+  const [turbosOri, setTurbosOri] = useState([]);
+  
 
   var { category } = useParams();
   if (!category) category = 1;
+ 
 
   useEffect(() => {
     fetch("https://62a0f7fb039c39cc8232a97d.mockapi.io/api/v1/categories/" + category + "/original")
@@ -17,6 +20,7 @@ const Turbos = (props) => {
             (data) => {
                 setIsLoaded(true);
                 setTurbos(data);
+                setTurbosOri(data);
             },
             (error) => {
                 setIsLoaded(true);
@@ -24,6 +28,15 @@ const Turbos = (props) => {
             }
         )
 },[]);
+
+useEffect(() => {
+  //console.log(turbosOri);
+  if (props.search && props.search.length>0) {
+      setTurbos(turbosOri.filter(turbo => turbo.title.toLowerCase().includes(props.search.toLowerCase())));
+  } else {
+      setTurbos(turbosOri);
+  }
+},[props.search])
 
   if (error) {
     return (
@@ -46,7 +59,7 @@ const Turbos = (props) => {
       <div className="container mt-4 mb-4">
         <div className="row">
           <h3 className="d-flex justify-content-center mb-5">
-            Original Turbochargers
+            Categoria produtos
           </h3>
             
           {turbos.map((turbo, index) => {

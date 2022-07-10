@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Input from "../../src/components/Input.jsx";
 import Favorites from "./Favorites.jsx";
 import { Link } from 'react-router-dom';
 
@@ -50,7 +49,6 @@ const Navbar = (props) => {
             </li>
           </ul>
           <Favorites></Favorites>
-          <Input></Input>
         </div>
       </div>
     </nav>
