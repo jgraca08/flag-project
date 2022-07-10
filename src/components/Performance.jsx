@@ -4,6 +4,7 @@ const Performance = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [turbos, setTurbos] = useState([]);
+  const [turbosOri, setTurbosOri] = useState([]);
 
   useEffect(() => {
     fetch("data/performance.json")
@@ -12,6 +13,7 @@ const Performance = (props) => {
         (data) => {
           setIsLoaded(true);
           setTurbos(data);
+          setTurbosOri(data);
         },
         (error) => {
           setIsLoaded(true);
@@ -19,6 +21,15 @@ const Performance = (props) => {
         }
       );
   }, []);
+
+  useEffect(() => {
+    //console.log(TurbosOri);
+    if (props.search && props.search.length>0) {
+        setTurbos(turbosOri.filter(turbo => turbo.title.toLowerCase().includes(props.search.toLowerCase())));
+    } else {
+        setTurbos(turbosOri);
+    }
+},[props.search])
 
   if (error) {
     return (

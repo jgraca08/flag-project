@@ -37,30 +37,12 @@ const Navbar = (props) => {
                 About us
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle fw-bold text-white"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Turbochargers
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <Link to={"/original"} className="dropdown-item" >
-                    Original
-                  </Link>
-                </li>
-                <li>
-                  <Link to={"/performance"} className="dropdown-item" >
-                    Performance
-                  </Link>
-                </li>
-              </ul>
+            <li className="nav-item">
+              <Link to={"/products"} className="nav-link fw-bold text-white" href="#">
+                Products
+              </Link>
             </li>
+            
             <li className="nav-item">
               <Link to={"/contactus"} className="nav-link fw-bold text-white">
                 Contacts
