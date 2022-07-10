@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Search from "../../src/components/Search.jsx";
+import Input from "../../src/components/Input.jsx";
 import Favorites from "./Favorites.jsx";
 import { Link } from 'react-router-dom';
 
@@ -50,7 +50,7 @@ const Navbar = (props) => {
             </li>
           </ul>
           <Favorites></Favorites>
-          <Search></Search>
+          <Input></Input>
         </div>
       </div>
     </nav>

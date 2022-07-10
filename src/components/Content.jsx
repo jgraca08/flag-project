@@ -5,7 +5,6 @@ import SingleProduct from "../views/SingleProduct";
 import About from "./About";
 import Contact from "./Contact";
 import NotFound from "./NotFound";
-import Performance from "./Performance";
 import Products from "./Products";
 import Turbo from "./Turbo";
 
@@ -17,7 +16,6 @@ const Content = () => (
         <Route path="/products" element={<Products />} />
         <Route path="/products/:category" element={<Products />} />
         <Route path="/products/:category/original/:turbo" element={<Turbo />} />
-        <Route path="/performance" element={<Performance />} />
         <Route path="/single" element={<SingleProduct />} />
         <Route path="/aboutus" element={<About />} />
         <Route path="/contactus" element={<Contact />} />

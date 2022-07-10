@@ -1,6 +1,6 @@
 import React from "react";
 
-const Search = (props) => {
+const Input = (props) => {
 
     return(
         <form className="d-flex" role="search">
@@ -12,4 +12,4 @@ const Search = (props) => {
 
 }
 
-export default Search;
+export default Input;

@@ -62,8 +62,7 @@ const Turbos = (props) => {
                     <h5 className="card-title">{turbo.title}</h5>
                     <p className="card-text">{turbo.description}</p>
                     <a href={"/products/" + turbo.categoryId + "/original/" + turbo.id }
-                      className="btn btn-sm btn-outline-danger rounded-0"
-                    >
+                      className="btn btn-sm btn-outline-danger rounded-0">
                       More
                     </a>
                   </div>
