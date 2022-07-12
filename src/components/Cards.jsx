@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Spiner from "./Spiner";
 
 const Cards = (props) => {
   const [error, setError] = useState(null);
@@ -36,26 +38,13 @@ const Cards = (props) => {
     );
   } else if (!isLoaded) {
     return (
-      <div className="d-flex justify-content-center">
-        <div className="spinner-border text-danger mt-5 mb-5 " role="status">
-          <span className="sr-only"></span>
-        </div>
-      </div>
+      <Spiner></Spiner>
     );
   } else {
     return (
       <>
         <div className="container mt-4 mb-5">
-          <div className="d-grid gap-2 d-md-flex justify-content-md-center mb-4">
-            <button type="button" className="btn btn-outline-danger rounded-0">
-              Original
-            </button>
-            <button type="button" className="btn btn-outline-danger rounded-0">
-              Performance
-            </button>
-          </div>
-
-          <div className="row row-cols-1 row-cols-md-3 g-4">
+           <div className="row row-cols-1 row-cols-md-3 g-4">
             {turbos.map((turbo, index) => {
               return (
                 <div className="col" key={index}>
@@ -70,17 +59,22 @@ const Cards = (props) => {
                     <div className="card-body bg-light">
                       <h5 className="card-title">{turbo.title}</h5>
                       <p className="card-text">{turbo.description}</p>
-                      <a
-                        href="#"
-                        className="btn btn-sm btn-outline-danger rounded-0"
-                      >
-                        More info
-                      </a>
+                      <a href={"/products/" + turbo.categoryId + "/original/" + turbo.id }
+                      className="btn btn-sm btn-outline-danger rounded-0">
+                      More info
+                    </a>
                     </div>
                   </div>
                 </div>
               );
             })}
+          </div>
+          <div className="d-grid gap-2 d-md-flex justify-content-md-center mb-4 mt-4">
+          <Link to={"/products"}>
+            <button type="button" className="btn btn-outline-danger rounded-0">
+              More products
+            </button>
+            </Link>
           </div>
         </div>
       </>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import InputSearch from "./InputSearch";
+import Spiner from "./Spiner";
 import Turbos from "./Turbos";
 
 
@@ -39,11 +40,7 @@ const Products = (props) => {
     );
   } else if (!isLoaded) {
     return (
-      <div className="d-flex justify-content-center">
-        <div className="spinner-border text-danger mt-5 mb-5 " role="status">
-          <span className="sr-only"></span>
-        </div>
-      </div>
+      <Spiner></Spiner>
     );
   } else {
     return (

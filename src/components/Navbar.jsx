@@ -8,7 +8,7 @@ const Navbar = (props) => {
       <div className="container-fluid">
         <Link to={"/"} className="navbar-brand" href="#">
           <img
-            src="../images/logo.svg"
+            src="/../images/logo.svg"
             alt="logo"
             width="150"
             height="50"

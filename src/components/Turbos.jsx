@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
+import Spiner from "./Spiner";
 
 
 const Turbos = (props) => {
@@ -46,11 +47,7 @@ useEffect(() => {
     );
   } else if (!isLoaded) {
     return (
-      <div className="d-flex justify-content-center">
-        <div className="spinner-border text-danger mt-5 mb-5 " role="status">
-          <span className="sr-only"></span>
-        </div>
-      </div>
+      <Spiner></Spiner>
     );
   } else {
     return (
@@ -59,7 +56,7 @@ useEffect(() => {
       <div className="container mt-4 mb-4">
         <div className="row">
           <h3 className="d-flex justify-content-center mb-5">
-            Categoria produtos
+          {category == 1 ? "Original Turbochargers" : "Performance Turbochargers"}
           </h3>
             
           {turbos.map((turbo, index) => {
