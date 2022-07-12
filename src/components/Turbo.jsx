@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Posts from "../views/Posts";
 import Spiner from "./Spiner";
 
 const Turbo = (props) => {
@@ -68,6 +69,7 @@ const Turbo = (props) => {
               );
             })}
           </div>
+          <Posts></Posts>
       </>
     );
   }
