@@ -48,7 +48,9 @@ const Navbar = (props) => {
               </Link>
             </li>
           </ul>
-          <Favorites></Favorites>
+          <div className="pe-4 ">
+             <Link to={"/favorites"}><button className="btn btn-outline-danger rounded-0" type="submit"><i className="fa-solid fa-heart"></i></button></Link>
+        </div>
         </div>
       </div>
     </nav>
