@@ -19,6 +19,7 @@
 -Página para mostrar produtos/serviços disponíveis
 -Recurso a ficheiro JSON local ou MockAPI para alimentar a página
 -Search bar para procurar produtos na página
+-Comentários para cada produto
 
 ### Contacts
 -Página com dados para contacto, um formulário para contacto (simulação de submissão de dados apenas) e mensagem a informar que a mensagem foi enviada com sucesso.
