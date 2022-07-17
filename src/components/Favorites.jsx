@@ -10,7 +10,7 @@ const Favorites = (props) => {
 
   return(
     <>
-      <div className="container mb-5 mt-5">
+      <div className="container mt-4 mb-4">
         <div className="row">
         <h3 className="d-flex justify-content-center mb-5">
           Favorites
@@ -18,9 +18,9 @@ const Favorites = (props) => {
           
 
 {watchlist.length > 0 ? (
-  <div className="col-sm-3">
+  <>
   {watchlist.map((turbo) =>(
-            <div className="col" key={turbo.id}>
+            <div className="col-4 mb-5" key={turbo.id}>
                   <div className="card h-100 shadow rounded-0">
                     <div className="inner">
                       <img
@@ -31,7 +31,7 @@ const Favorites = (props) => {
                     </div>
                     <div className="card-body bg-light">
                       <h5 className="card-title">{turbo.title}</h5>
-                      <p className="card-text">{turbo.description}</p>
+                      
                       <a href={"/products/" + turbo.categoryId + "/original/" + turbo.id }
                       className="btn btn-sm btn-outline-danger rounded-0">
                       More
@@ -48,7 +48,7 @@ const Favorites = (props) => {
 
           )
           )}
-  </div>
+  </>
 ) : (
   <>
   <h3 className="d-flex justify-content-center">OPS!</h3>

@@ -58,8 +58,8 @@ const AddPost = props => {
         <div className="container mb-5">
         {newPost}
         <form onSubmit={e => onSubmit(e)}> 
-            <Required id="nickname" name="nickname" label="Name" onRequired={valRequired} pattern={/^[a-z-A-Z-0-9]{3,12}$/} error="O seu nickname tem de conter 3 a 12 caracteres" />
-            <Required id="info" name="info" label="Your message" onRequired={valRequired} pattern={/^[a-z-A-Z-0-9 ]{10,100}$/} error="A sua mensagem tem de conter 10 a 100 caracteres" />
+            <Required id="nickname" name="nickname" label="Name" onRequired={valRequired} pattern={/^[a-z-A-Z-0-9]{3,12}$/} error="Your nickname must have 3 - 12 characters" />
+            <Required id="info" name="info" label="Your message" onRequired={valRequired} pattern={/^[a-z-A-Z-0-9 ]{10,100}$/} error="Your message must have 10 - 100 characters" />
             <button type="submit" className="btn btn-outline-danger rounded-0" disabled={!valid}>Add new post</button>
         </form>
         </div>
